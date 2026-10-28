@@ -3654,14 +3654,14 @@ body.roulette-overlay-open .game-content {
   display: none !important;
 }
 body.game-active {
-  background-image: linear-gradient(rgba(7, 10, 24, .58), rgba(7, 10, 24, .68)), url("/halloween/personajes/MarioH.png") !important;
+  background-image: linear-gradient(rgba(7, 10, 24, .58), rgba(7, 10, 24, .68)), url("../halloween/personajes/MarioH.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;
 }
 body.roulette-overlay-open .wheel-area {
-  background-image: linear-gradient(rgba(7, 10, 24, .34), rgba(7, 10, 24, .48)), url("/halloween/personajes/MarioH.png") !important;
+  background-image: linear-gradient(rgba(7, 10, 24, .34), rgba(7, 10, 24, .48)), url("../halloween/personajes/MarioH.png") !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -4350,12 +4350,11 @@ body.roulette-overlay-open .wheel-area {
 </div>
 <script>
 
+// Los recursos estan en ../halloween/ (carpeta hermana de LaRuleta), tanto en local
+// como en GitHub Pages. Ruta RELATIVA: nunca empieza por "/".
 function getHalloweenAssetUrl(p) {
   var clean = String(p).replace(/^[/\\]+/, '');
-  if (window.location.protocol === 'file:') {
-    return '../' + clean;
-  }
-  return '/' + clean;
+  return '../' + clean;
 }
 
 (function () {
@@ -4415,7 +4414,7 @@ function getHalloweenAssetUrl(p) {
     <h1 class="welcome-title">LA RULETA DE LA SUPER CLASS BROS</h1>
     <p class="welcome-subtitle">¡Lee las normas y prepárate para jugar!</p>
     <div class="welcome-mario-scene">
-      <div class="welcome-halloween-banner"><img class="welcome-school" src="/halloween/personajes/MarioH.png" onerror="this.src='../halloween/personajes/MarioH.png'" alt="Mario Halloween" style="object-fit:contain;filter:drop-shadow(0 10px 25px rgba(255,117,24,0.7));max-height:220px;"></div>
+      <div class="welcome-halloween-banner"><img class="welcome-school" src="../halloween/personajes/MarioH.png" alt="Mario Halloween" style="object-fit:contain;filter:drop-shadow(0 10px 25px rgba(255,117,24,0.7));max-height:220px;"></div>
     </div>
     <h2 class="rules-title">Normas del juego</h2>
     
@@ -4700,7 +4699,7 @@ function getHalloweenAssetUrl(p) {
       <div class="pointer"></div>
       <canvas id="wheel" width="560" height="560"></canvas>
       <div class="mario-hub" aria-label="Mario">
-        <img src="/halloween/personajes/MarioH.png" onerror="this.src='../halloween/personajes/MarioH.png'" alt="Personaje Halloween" class="mario-image" id="wheelHostImg" style="object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.8));">
+        <img src="../halloween/personajes/MarioH.png" alt="Personaje Halloween" class="mario-image" id="wheelHostImg" style="object-fit:contain;filter:drop-shadow(0 4px 12px rgba(0,0,0,0.8));">
       </div>
     </div>
 
@@ -5770,7 +5769,7 @@ function openPuzzleGame() {
   specialGameKicker.textContent = "PUZZLE";
   specialGameTitle.textContent = " PUZZLE DEL COLE";
   setSpecialTimer(60);
-  specialGameBody.innerHTML = '<p class="special-instruction">La profesora pulsa <b>COMENZAR</b>. Hay un minuto para ordenar la imagen del colegio.</p><div class="puzzle-layout"><div><div class="puzzle-wrap" id="puzzleWrap"></div></div><div class="puzzle-reference"><div>IMAGEN RESUELTA</div><img src="/halloween/personajes/MarioH.png" alt="Puzzle resuelto"><small>Sirve de gu\xEDa para colocar las piezas.</small></div></div><div class="special-status" id="specialStatus">Pulsa COMENZAR para activar el puzzle.</div><div class="special-actions" id="puzzleActions"><button class="special-primary" id="puzzleStart">\u25B6 COMENZAR</button></div>';
+  specialGameBody.innerHTML = '<p class="special-instruction">La profesora pulsa <b>COMENZAR</b>. Hay un minuto para ordenar la imagen del colegio.</p><div class="puzzle-layout"><div><div class="puzzle-wrap" id="puzzleWrap"></div></div><div class="puzzle-reference"><div>IMAGEN RESUELTA</div><img src="../halloween/personajes/MarioH.png" alt="Puzzle resuelto"><small>Sirve de gu\xEDa para colocar las piezas.</small></div></div><div class="special-status" id="specialStatus">Pulsa COMENZAR para activar el puzzle.</div><div class="special-actions" id="puzzleActions"><button class="special-primary" id="puzzleStart">\u25B6 COMENZAR</button></div>';
   specialGameOverlay.classList.add("show");
   buildPuzzle();
   document.getElementById("puzzleStart").addEventListener("click", () => {
@@ -5792,7 +5791,7 @@ function buildPuzzle() {
     d.dataset.slot = slot;
     d.dataset.piece = piece;
     const row = Math.floor(piece / n), col = piece % n;
-    d.style.backgroundImage = 'url("/halloween/personajes/MarioH.png")';
+    d.style.backgroundImage = 'url("../halloween/personajes/MarioH.png")';
     d.style.backgroundPosition = "".concat(col / (n - 1) * 100, "% ").concat(row / (n - 1) * 100, "%");
     d.addEventListener("click", () => selectPuzzlePiece(slot, d));
     wrap.appendChild(d);
@@ -6303,7 +6302,7 @@ function openAdminGameDemo(type) {
         const d = document.createElement("button");
         d.className = "demo-puzzle-piece";
         const r = Math.floor(piece / 4), c = piece % 4;
-        d.style.backgroundImage = 'url("/halloween/personajes/MarioH.png")';
+        d.style.backgroundImage = 'url("../halloween/personajes/MarioH.png")';
         d.style.backgroundPosition = "".concat(c / 3 * 100, "% ").concat(r / 3 * 100, "%");
         d.title = "Pieza de ejemplo";
         grid.appendChild(d);
@@ -8135,7 +8134,7 @@ function openAdminGameDemo(type) {
         const d = document.createElement("button");
         d.className = "demo-puzzle-piece";
         d.dataset.slot = slot;
-        d.style.backgroundImage = 'url("/halloween/personajes/MarioH.png")';
+        d.style.backgroundImage = 'url("../halloween/personajes/MarioH.png")';
         const r = Math.floor(piece / 4), c = piece % 4;
         d.style.backgroundPosition = "".concat(c / 3 * 100, "% ").concat(r / 3 * 100, "%");
         d.addEventListener("click", () => {
@@ -8578,7 +8577,7 @@ function openAdminGameDemo(type) {
           d.className = "demo-puzzle-piece";
           d.dataset.piece = piece;
           const r = Math.floor(piece / 4), c = piece % 4;
-          d.style.backgroundImage = 'url("/halloween/personajes/MarioH.png")';
+          d.style.backgroundImage = 'url("../halloween/personajes/MarioH.png")';
           d.style.backgroundPosition = "".concat(c / 3 * 100, "% ").concat(r / 3 * 100, "%");
           d.onclick = () => {
             if (!started) return;
@@ -9270,7 +9269,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
           d.className = "demo-puzzle-piece";
           d.dataset.piece = piece;
           const r = Math.floor(piece / 4), c = piece % 4;
-          d.style.backgroundImage = 'url("/halloween/personajes/MarioH.png")';
+          d.style.backgroundImage = 'url("../halloween/personajes/MarioH.png")';
           d.style.backgroundPosition = "".concat(c / 3 * 100, "% ").concat(r / 3 * 100, "%");
           d.onclick = () => {
             if (!started) return;
@@ -9301,7 +9300,7 @@ var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
       };
       var paint = paint2, paintSolved = paintSolved2;
       title.textContent = " PUZZLE \u2014 DEMO FUNCIONAL";
-      body.innerHTML = '<p class="admin-demo-text">Pulsa COMENZAR. Hay <b>1 minuto</b>. Toca una pieza y despu\xE9s otra para intercambiarlas. Tambi\xE9n puedes consultar la imagen resuelta.</p><div class="puzzle-layout"><div class="demo-puzzle" id="demoPuzzle"></div><div class="puzzle-reference"><div>IMAGEN RESUELTA</div><img src="/halloween/personajes/MarioH.png" alt="Gu\xEDa del puzzle"><small>Gu\xEDa para completar el puzzle.</small></div></div><div class="demo-timer" id="demoPuzzleTimer">01:00</div><div class="demo-selected" id="demoPuzzleStatus">Pulsa COMENZAR.</div><div class="admin-demo-actions"><button class="demo-primary" id="demoPuzzleStart">\u25B6 COMENZAR</button><button id="demoPuzzleMix">\u{1F500} MEZCLAR</button><button id="demoPuzzleSolve">\u{1F9E9} RESOLVER DEMO</button></div>';
+      body.innerHTML = '<p class="admin-demo-text">Pulsa COMENZAR. Hay <b>1 minuto</b>. Toca una pieza y despu\xE9s otra para intercambiarlas. Tambi\xE9n puedes consultar la imagen resuelta.</p><div class="puzzle-layout"><div class="demo-puzzle" id="demoPuzzle"></div><div class="puzzle-reference"><div>IMAGEN RESUELTA</div><img src="../halloween/personajes/MarioH.png" alt="Gu\xEDa del puzzle"><small>Gu\xEDa para completar el puzzle.</small></div></div><div class="demo-timer" id="demoPuzzleTimer">01:00</div><div class="demo-selected" id="demoPuzzleStatus">Pulsa COMENZAR.</div><div class="admin-demo-actions"><button class="demo-primary" id="demoPuzzleStart">\u25B6 COMENZAR</button><button id="demoPuzzleMix">\u{1F500} MEZCLAR</button><button id="demoPuzzleSolve">\u{1F9E9} RESOLVER DEMO</button></div>';
       const grid = document.getElementById("demoPuzzle"), timer = document.getElementById("demoPuzzleTimer"), status = document.getElementById("demoPuzzleStatus");
       let arr = [], sel = null, started = false;
       paint2();
