@@ -1,0 +1,39 @@
+===============================================================
+🎃 LA RULETA DE HALLOWEEN 👻 - PAQUETE COMPLETO DE DESCARGA
+===============================================================
+
+¡Hola! Este paquete contiene el juego de La Ruleta adaptado a Halloween 
+para la clase de 3º de Primaria (niños de 8 años).
+
+¿CÓMO JUGAR?
+---------------------------------------------------------------
+1. Descomprime esta carpeta en tu ordenador o memoria USB.
+2. Abre la carpeta "LaRuleta" y haz doble clic sobre "index.html".
+3. Se abrirá automáticamente en tu navegador favorito (Chrome, Edge, Firefox, Safari).
+   ¡No necesitas instalar nada ni tener conexión a internet!
+
+CARACTERÍSTICAS DE ESTA EDICIÓN DE HALLOWEEN:
+---------------------------------------------------------------
+* Asignatura única: HALLOWEEN, con las 3 frases:
+  1) "LOS CELTAS CREÍAN QUE LOS ESPÍRITUS CAMINABAN ENTRE LOS VIVOS LA NOCHE DEL 31 DE OCTUBRE"
+     -> El número 31 aparece descubierto por defecto.
+  2) "TRUCO O TRATO: SI NO ACEPTABAS EL TRATO DE UN DUENDE, PODÍA JUGARTE UNA MALA PASADA"
+     -> Con el signo de dos puntos ':' y coma ',' visibles desde el inicio.
+  3) "TRICK SIGNIFICA TRAVESURA Y TREAT SIGNIFICA GOLOSINA EN INGLÉS"
+
+* 8 Personajes con disfraces de Halloween (Mario, Luigi, Peach, Donkey Kong, Bowser, Toad, Wario, Martín).
+  ¡Si fallan una consonante, el personaje se transforma en su versión triste! Al volver a girar, se recupera.
+
+* Sonidos reales de Halloween:
+  - durante.mp3: Música ambiental en bucle suave mientras está el panel de juego.
+  - fallo.mp3: Sonido de error al fallar consonante o vocal.
+  - ruleta.mp3: Sonido mientras gira la ruleta hasta que se detiene.
+
+* Casillas especiales de Halloween en la ruleta:
+  - 💀 QUIEBRA
+  - 🦇 PIERDE TURNO
+  - 🎃 SUPER RETO (preguntas sobre Halloween)
+  - 🧙‍♀️ RETO BRUJA, 🧟 RETO ZOMBI, 👻 RETO FANTASMA
+
+¡Que disfrutéis de una clase terroríficamente divertida! 🎃🍬
+===============================================================
